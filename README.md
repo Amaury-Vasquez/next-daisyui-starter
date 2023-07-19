@@ -1,4 +1,4 @@
-# NextJS [daisyUI](https://daisyui.com/) Starter
+# NextJS [daisyUI](https://daisyui.com/) starter
 
 ## Getting Started
 
