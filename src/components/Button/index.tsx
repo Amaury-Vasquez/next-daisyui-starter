@@ -3,7 +3,7 @@ import { FC, HTMLProps, ReactNode } from "react";
 import { VARIANT_STYLES, Variant } from "../../styles/variants";
 import { ButtonType } from "@/types/button";
 
-interface ButtonProps extends HTMLProps<HTMLButtonElement> {
+export interface ButtonProps extends HTMLProps<HTMLButtonElement> {
   className?: string;
   children?: ReactNode;
   variant?: Variant;

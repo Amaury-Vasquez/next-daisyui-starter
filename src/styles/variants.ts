@@ -34,5 +34,5 @@ export const TEXT_COLORS = {
   warning: "text-warning",
   error: "text-error",
   base: "text-base-content",
-  none: "",
+  default: "",
 };

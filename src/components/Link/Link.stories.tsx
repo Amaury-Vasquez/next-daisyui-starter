@@ -15,5 +15,6 @@ export const Base: Story = {
   args: {
     children: "Link",
     href: "",
+    underline: false,
   },
 };

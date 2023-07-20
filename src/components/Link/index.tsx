@@ -8,7 +8,7 @@ const STYLES = {
   base: "btn-link",
 };
 
-interface ButtonProps extends LinkProps {
+export interface ButtonProps extends LinkProps {
   children?: ReactNode;
   variant?: Variant;
   href: string;
@@ -22,7 +22,7 @@ const Link: FC<ButtonProps> = ({
   className,
   variant = "base",
   underline = false,
-  color = "none",
+  color = "default",
   ...props
 }) => (
   <NextLink
