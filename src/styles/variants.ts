@@ -24,6 +24,15 @@ export const VARIANT_STYLES = {
 
 export type Variant = keyof typeof VARIANT_STYLES;
 
+export const BUTTON_SIZES = {
+  xs: "btn-xs",
+  sm: "btn-sm",
+  md: "btn-md",
+  lg: "btn-lg",
+};
+
+export type ButtonSize = keyof typeof BUTTON_SIZES;
+
 export const TEXT_COLORS = {
   primary: "text-primary",
   secondary: "text-secondary",
