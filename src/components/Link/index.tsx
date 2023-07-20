@@ -7,6 +7,7 @@ import {
   TEXT_COLORS,
   BUTTON_SIZES,
   ButtonSize,
+  BUTTON_SHAPES,
 } from "../../styles/variants";
 
 const STYLES = {
@@ -22,6 +23,7 @@ export interface ButtonProps extends LinkProps {
   className?: string;
   underline?: boolean;
   size?: ButtonSize;
+  shape?: keyof typeof BUTTON_SHAPES;
 }
 
 const Link: FC<ButtonProps> = ({
@@ -31,6 +33,7 @@ const Link: FC<ButtonProps> = ({
   underline = false,
   color = "default",
   size,
+  shape,
   ...props
 }) => (
   <NextLink
@@ -39,6 +42,7 @@ const Link: FC<ButtonProps> = ({
       color && TEXT_COLORS[color],
       underline ? "underline underline-offset-2" : "no-underline",
       size && BUTTON_SIZES[size],
+      shape && BUTTON_SHAPES[shape],
       className
     )}
     {...props}

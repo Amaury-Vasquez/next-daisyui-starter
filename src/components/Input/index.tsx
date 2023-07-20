@@ -40,6 +40,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       bordered = true,
       size = "md",
       variant,
+      className,
       ...props
     },
     ref
@@ -51,7 +52,8 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           "input text-left",
           bordered && "input-bordered",
           error ? INPUT_VARIANTS["error"] : variant && INPUT_VARIANTS[variant],
-          INPUT_SIZES[size]
+          INPUT_SIZES[size],
+          className
         )}
         ref={ref}
         {...props}

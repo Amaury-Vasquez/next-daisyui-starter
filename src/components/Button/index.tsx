@@ -5,6 +5,7 @@ import {
   Variant,
   ButtonSize,
   BUTTON_SIZES,
+  BUTTON_SHAPES,
 } from "../../styles/variants";
 import { ButtonType } from "@/types/button";
 
@@ -15,6 +16,8 @@ export interface ButtonProps
   variant?: Variant;
   type?: ButtonType;
   size?: ButtonSize;
+  shape?: keyof typeof BUTTON_SHAPES;
+  disabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({
@@ -23,6 +26,8 @@ const Button: FC<ButtonProps> = ({
   type = "button",
   className,
   size = "md",
+  shape,
+  disabled = false,
   ...props
 }) => (
   <button
@@ -30,10 +35,13 @@ const Button: FC<ButtonProps> = ({
       "btn",
       className,
       variant !== "base" && VARIANT_STYLES[variant],
-      BUTTON_SIZES[size]
+      BUTTON_SIZES[size],
+      shape && BUTTON_SHAPES[shape],
+      disabled && "btn-disabled"
     )}
     {...props}
     type={type}
+    disabled={disabled}
   >
     {children}
   </button>

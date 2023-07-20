@@ -33,6 +33,11 @@ export const BUTTON_SIZES = {
 
 export type ButtonSize = keyof typeof BUTTON_SIZES;
 
+export const BUTTON_SHAPES = {
+  square: "btn-square",
+  circle: "btn-circle",
+};
+
 export const TEXT_COLORS = {
   primary: "text-primary",
   secondary: "text-secondary",
