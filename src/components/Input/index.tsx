@@ -1,9 +1,9 @@
 import clsx from "clsx";
 import { HTMLProps, forwardRef } from "react";
-import ErrorMessage from "./ErrorMessage";
-import Label from "./Label";
+import Label from "../Label";
+import ErrorMessage from "../ErrorMessage";
 
-const INPUT_VARIANTS = {
+export const INPUT_VARIANTS = {
   primary: "input-primary",
   ghost: "input-ghost",
   secondary: "input-secondary",
@@ -14,7 +14,7 @@ const INPUT_VARIANTS = {
   error: "input-error",
 };
 
-const INPUT_SIZES = {
+export const INPUT_SIZES = {
   sm: "input-sm",
   md: "input-md",
   lg: "input-lg",
