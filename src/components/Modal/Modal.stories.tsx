@@ -23,15 +23,13 @@ export const Base: Story = {
   args: {
     position: "center",
     showCloseButton: true,
-    id: "modal",
     children: <TemplateChildren />,
   },
   decorators: [
     (Story) => (
       <div className="w-full h-full">
         <Story />
-        {/* @ts-ignore */}
-        <Button onClick={() => document?.getElementById("modal")?.showModal()}>
+        <Button onClick={() => document?.querySelector("dialog")?.showModal()}>
           Open modal
         </Button>
       </div>
