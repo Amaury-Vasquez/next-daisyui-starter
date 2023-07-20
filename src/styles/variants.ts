@@ -1,12 +1,13 @@
-export const primary = "btn-primary";
-export const secondary = "btn-secondary";
-export const accent = "btn-accent";
-export const neutral = "btn-neutral";
-export const info = "btn-info";
-export const success = "btn-success";
-export const warning = "btn-warning";
-export const error = "btn-error";
-export const base = "btn";
+export const primary = "btn btn-primary";
+export const secondary = "btn btn-secondary";
+export const accent = "btn btn-accent";
+export const neutral = "btn btn-neutral";
+export const info = "btn btn-info";
+export const success = "btn btn-success";
+export const warning = "btn btn-warning";
+export const error = "btn btn-error";
+export const ghost = "btn btn-ghost";
+export const base = "";
 
 export const VARIANT_STYLES = {
   base,
@@ -18,6 +19,20 @@ export const VARIANT_STYLES = {
   success,
   warning,
   error,
+  ghost,
 };
 
 export type Variant = keyof typeof VARIANT_STYLES;
+
+export const TEXT_COLORS = {
+  primary: "text-primary",
+  secondary: "text-secondary",
+  accent: "text-accent",
+  neutral: "text-neutral",
+  info: "text-info",
+  success: "text-success",
+  warning: "text-warning",
+  error: "text-error",
+  base: "text-base-content",
+  none: "",
+};
