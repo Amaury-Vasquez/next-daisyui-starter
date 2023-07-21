@@ -17,6 +17,8 @@ export const Base: Story = {
     withButtons: false,
     vertical: false,
     indicator: false,
+    width: 300,
+    height: 400,
     images: Array.from({ length: 8 }, (_, i) => ({
       src: `https://picsum.photos/200/300?random=${i + 1}`,
       alt: `Image ${i + 1}`,

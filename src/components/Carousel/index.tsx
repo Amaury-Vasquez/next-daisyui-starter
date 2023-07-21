@@ -9,16 +9,21 @@ export interface CarouselProps {
   vertical?: boolean;
   indicator?: boolean;
   withButtons?: boolean;
+  width?: number;
+  height?: number;
   className?: string;
 }
 
 const Carousel: FC<CarouselProps> = ({
+  // It is prefferred that the images have the same dimentions
   images,
   prefixKey,
   collapsedImage = false,
   vertical = false,
   withButtons = false,
   indicator = false,
+  width = 300,
+  height = 400,
   className,
 }) => {
   const Slider = (
@@ -45,8 +50,8 @@ const Carousel: FC<CarouselProps> = ({
             className={clsx(collapsedImage && (vertical ? "h-full" : "w-full"))}
             src={src}
             alt={alt}
-            width={300}
-            height={400}
+            width={width}
+            height={height}
           />
           {withButtons && (
             <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
