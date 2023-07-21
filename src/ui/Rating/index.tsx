@@ -19,6 +19,7 @@ export interface RatingProps {
   onChange: (value: number) => void;
   className?: string;
   containerClassName?: string;
+  value?: number;
   mask?: "heart" | "star";
 }
 
@@ -33,7 +34,7 @@ const Rating: FC<RatingProps> = ({
   const [value, setValue] = useState<number>(0);
 
   return (
-    <form
+    <button
       className={clsx(
         "rating rating-half",
         RATING_SIZES[size],
@@ -64,7 +65,7 @@ const Rating: FC<RatingProps> = ({
           checked={value === i}
         />
       ))}
-    </form>
+    </button>
   );
 };
 

@@ -16,6 +16,8 @@ export const Base: Story = {
     mask: "star",
     size: "md",
     name: "rating",
-    onChange: (value: number) => {},
+    onChange: (value: number) => {
+      console.log(value);
+    },
   },
 };
