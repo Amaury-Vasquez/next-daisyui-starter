@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { FC, useState } from "react";
+import { FC } from "react";
 
 export const RATING_SIZES = {
   xs: "rating-xs",
@@ -31,39 +31,37 @@ const Rating: FC<RatingProps> = ({
   value,
   className,
   containerClassName,
-}) => {
-  return (
-    <button
-      className={clsx(
-        "rating rating-half",
-        RATING_SIZES[size],
-        containerClassName
-      )}
-    >
+}) => (
+  <button
+    className={clsx(
+      "rating rating-half",
+      RATING_SIZES[size],
+      containerClassName
+    )}
+  >
+    <input
+      type="radio"
+      name={name}
+      className="rating-hidden"
+      checked={value === 0}
+      onChange={() => onChange(0)}
+    />
+    {Array.from({ length: 10 }, (_, i) => i).map((i) => (
       <input
+        className={clsx(
+          "mask",
+          MASKS[mask],
+          i % 2 === 0 ? "mask-half-1" : "mask-half-2",
+          className
+        )}
         type="radio"
         name={name}
-        className="rating-hidden"
-        checked={value === 0}
-        onChange={() => onChange(0)}
+        key={`rating-${name}-${i}`}
+        checked={value === i + 1}
+        onChange={() => onChange(i + 1)}
       />
-      {Array.from({ length: 10 }, (_, i) => i).map((i) => (
-        <input
-          className={clsx(
-            "mask",
-            MASKS[mask],
-            i % 2 === 0 ? "mask-half-1" : "mask-half-2",
-            className
-          )}
-          type="radio"
-          name={name}
-          key={`rating-${name}-${i}`}
-          checked={value === i + 1}
-          onChange={() => onChange(i + 1)}
-        />
-      ))}
-    </button>
-  );
-};
+    ))}
+  </button>
+);
 
 export default Rating;

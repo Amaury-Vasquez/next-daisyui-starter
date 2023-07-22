@@ -6,7 +6,6 @@ import {
   MdOutlineCheckCircleOutline,
   MdOutlineErrorOutline,
 } from "react-icons/md";
-
 import { COMMON_POSITIONS, TEXT_COLORS } from "../../styles";
 
 export const ALERT_ICONS = {

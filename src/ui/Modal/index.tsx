@@ -1,8 +1,8 @@
 import clsx from "clsx";
 import { forwardRef, HTMLProps } from "react";
 import { AiOutlineClose } from "react-icons/ai";
-import Button from "../Button";
 import { POSITIONS } from "../../styles";
+import Button from "../Button";
 
 export const MODAL_POSITIONS = {
   center: "modal-center",

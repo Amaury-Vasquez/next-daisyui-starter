@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { HTMLProps, forwardRef } from "react";
-import Label from "../Label";
 import ErrorMessage from "../ErrorMessage";
+import Label from "../Label";
 
 export const INPUT_VARIANTS = {
   primary: "input-primary",

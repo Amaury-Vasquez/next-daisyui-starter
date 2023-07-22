@@ -22,7 +22,7 @@ const Progress: FC<ProgressProps> = ({ value, variant = "base" }) => (
     className={clsx("progress", ProgressVariants[variant])}
     {...(value && { value })}
     max="100"
-  ></progress>
+  />
 );
 
 export default Progress;
