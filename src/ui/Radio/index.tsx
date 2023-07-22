@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import { FC, HTMLProps } from "react";
+import { forwardRef, HTMLProps } from "react";
 
 export const RADIO_VARIANTS = {
   base: "",
@@ -25,22 +25,21 @@ export interface RadioProps
   size?: keyof typeof RADIO_SIZES;
 }
 
-const Radio: FC<RadioProps> = ({
-  variant = "base",
-  size = "md",
-  className,
-  ...props
-}) => (
-  <input
-    className={clsx(
-      "radio",
-      RADIO_VARIANTS[variant],
-      RADIO_SIZES[size],
-      className
-    )}
-    type="radio"
-    {...props}
-  />
+const Radio = forwardRef<HTMLInputElement, RadioProps>(
+  ({ variant = "base", size = "md", className, ...props }, ref) => (
+    <input
+      className={clsx(
+        "radio",
+        RADIO_VARIANTS[variant],
+        RADIO_SIZES[size],
+        className
+      )}
+      ref={ref}
+      type="radio"
+      {...props}
+    />
+  )
 );
 
+Radio.displayName = "Radio";
 export default Radio;

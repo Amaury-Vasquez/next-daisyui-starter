@@ -18,11 +18,11 @@ export const Base: Story = {
   },
   decorators: [
     (Story) => (
-      <div className="flex w-fit gap-4">
+      <form className="flex w-fit gap-4">
         <Story />
         <Story />
         <Story />
-      </div>
+      </form>
     ),
   ],
 };
