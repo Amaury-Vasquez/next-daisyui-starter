@@ -1,4 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { useState } from "react";
+import { useRating } from "../../hooks";
 import Rating from ".";
 
 const meta = {
@@ -16,8 +18,12 @@ export const Base: Story = {
     mask: "star",
     size: "md",
     name: "rating",
-    onChange: (value: number) => {
-      console.log(value);
-    },
+  },
+  render: ({ ...args }) => {
+    const Rate = () => {
+      const { rating, onChange } = useRating(0);
+      return <Rating {...args} value={rating} onChange={onChange} />;
+    };
+    return <Rate />;
   },
 };

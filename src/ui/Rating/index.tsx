@@ -19,7 +19,7 @@ export interface RatingProps {
   onChange: (value: number) => void;
   className?: string;
   containerClassName?: string;
-  value?: number;
+  value: number;
   mask?: "heart" | "star";
 }
 
@@ -28,11 +28,10 @@ const Rating: FC<RatingProps> = ({
   name,
   onChange,
   mask = "star",
+  value,
   className,
   containerClassName,
 }) => {
-  const [value, setValue] = useState<number>(0);
-
   return (
     <button
       className={clsx(
@@ -40,15 +39,13 @@ const Rating: FC<RatingProps> = ({
         RATING_SIZES[size],
         containerClassName
       )}
-      onChange={() => onChange(value)}
     >
       <input
         type="radio"
         name={name}
         className="rating-hidden"
-        value={0}
         checked={value === 0}
-        onChange={() => setValue(0)}
+        onChange={() => onChange(0)}
       />
       {Array.from({ length: 10 }, (_, i) => i).map((i) => (
         <input
@@ -61,8 +58,8 @@ const Rating: FC<RatingProps> = ({
           type="radio"
           name={name}
           key={`rating-${name}-${i}`}
-          onChange={() => setValue(i)}
-          checked={value === i}
+          checked={value === i + 1}
+          onChange={() => onChange(i + 1)}
         />
       ))}
     </button>
