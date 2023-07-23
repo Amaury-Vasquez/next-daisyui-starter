@@ -14,6 +14,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
   args: {
+    horizontal: "right",
+    vertical: "bottom",
     toggleContent: "Click me",
     menu: (
       <Menu
@@ -25,7 +27,5 @@ export const Base: Story = {
         itemsPrefix="storydropdown"
       />
     ),
-    horizontal: "right",
-    vertical: "bottom",
   },
 };
