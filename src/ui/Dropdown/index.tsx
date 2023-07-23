@@ -17,7 +17,6 @@ export interface DropdownProps {
   toggleContent: ReactNode;
   menu: ReactNode;
   toggleClassName?: string;
-  menuClassName?: string;
   horizontal?: keyof typeof HORIZONTAL_POSITIONS;
   vertical?: keyof typeof VERTICAL_POSITIONS;
   className?: string;
@@ -29,7 +28,6 @@ const Dropdown: FC<DropdownProps> = ({
   toggleClassName,
   horizontal = "left",
   vertical = "bottom",
-  menuClassName = "mt-3 w-56",
   className,
 }) => {
   const { isActive, toggle } = useToggle();
