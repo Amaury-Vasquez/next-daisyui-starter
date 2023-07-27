@@ -14,6 +14,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Base: Story = {
   args: {
+    buttonVariant: "ghost",
     horizontal: "right",
     vertical: "bottom",
     toggleContent: "Click me",
@@ -28,4 +29,11 @@ export const Base: Story = {
       />
     ),
   },
+  decorators: [
+    (Story) => (
+      <div className="w-fit m-auto">
+        <Story />
+      </div>
+    ),
+  ],
 };
