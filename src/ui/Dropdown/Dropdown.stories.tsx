@@ -18,6 +18,7 @@ export const Base: Story = {
     horizontal: "right",
     vertical: "bottom",
     toggleContent: "Click me",
+    closeOnItemClick: false,
     menu: (
       <Menu
         className="w-56 mt-2"

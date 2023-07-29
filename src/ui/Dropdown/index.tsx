@@ -3,6 +3,7 @@ import { FC, ReactNode, useRef } from "react";
 import { useOnClickOutside, useToggle } from "../../hooks";
 import { Variant } from "../../styles";
 import Button from "../Button";
+
 export const HORIZONTAL_POSITIONS = {
   left: "left-0",
   right: "right-0",
@@ -20,6 +21,7 @@ export interface DropdownProps {
   toggleClassName?: string;
   horizontal?: keyof typeof HORIZONTAL_POSITIONS;
   vertical?: keyof typeof VERTICAL_POSITIONS;
+  closeOnItemClick?: boolean;
   className?: string;
 }
 
@@ -30,6 +32,7 @@ const Dropdown: FC<DropdownProps> = ({
   toggleClassName,
   horizontal = "left",
   vertical = "bottom",
+  closeOnItemClick = false,
   className,
 }) => {
   const { isActive, toggle, deactivate } = useToggle();
@@ -53,6 +56,7 @@ const Dropdown: FC<DropdownProps> = ({
             HORIZONTAL_POSITIONS[horizontal],
             className
           )}
+          {...(closeOnItemClick && { onClick: deactivate })}
         >
           {menu}
         </div>
