@@ -68,3 +68,8 @@ export const POSITIONS = {
   top: "top-0",
   ...COMMON_POSITIONS,
 };
+
+export const HORIZONTAL_POSITIONS = {
+  left: "left-0",
+  right: "right-0",
+};

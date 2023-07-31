@@ -1,13 +1,8 @@
 import clsx from "clsx";
 import { FC, ReactNode, useRef } from "react";
 import { useOnClickOutside, useToggle } from "../../hooks";
-import { Variant } from "../../styles";
+import { Variant, HORIZONTAL_POSITIONS } from "../../styles";
 import Button from "../Button";
-
-export const HORIZONTAL_POSITIONS = {
-  left: "left-0",
-  right: "right-0",
-};
 
 export const VERTICAL_POSITIONS = {
   top: "bottom-full mb-2",

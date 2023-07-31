@@ -5,7 +5,7 @@ import { IconType } from "react-icons";
 export interface SwapProps
   extends Omit<
     HTMLProps<HTMLInputElement>,
-    "type" | "defaultValue" | "className"
+    "type" | "defaultValue" | "className" | "ref"
   > {
   asButton?: boolean;
   rotate?: boolean;
