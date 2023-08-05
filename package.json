@@ -9,7 +9,7 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_2af9a880a50b34b"
+    "chromatic": "npx chromatic --project-token=chpt_2af9a880a50b34b --auto-accept-changes"
   },
   "dependencies": {
     "@types/node": "20.4.2",
